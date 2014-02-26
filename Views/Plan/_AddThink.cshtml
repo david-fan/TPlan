@@ -1,0 +1,32 @@
+﻿@model TeachPlan.Think
+
+
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>添加</legend>
+            @Html.HiddenFor(model => model.planId)
+        <div class="editor-label">
+            类型
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(model => model.Type, TeachPlan.Controllers.PlanController.getAllThinkTypeName())
+            @Html.ValidationMessageFor(model => model.Type)
+        </div>
+
+        <div class="editor-label">
+            内容
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Content)
+            @Html.ValidationMessageFor(model => model.Content)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}

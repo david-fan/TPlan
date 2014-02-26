@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TeachPlan.Active>
+<table>
+    <tr>
+        <th>
+            模块名称
+        </th>
+        <th>
+            属性
+        </th>
+        <th>
+            适用条件
+        </th>
+        <th>
+            实施步骤
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Property
+            </td>
+            <td>
+                @item.Condition
+            </td>
+            <td>
+                <div class="editor-field">
+                    <ul>
+                        @foreach (var s in item.Steps)
+                        {
+                            <li>
+                                @Html.Label(s)
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<TeachPlan.Knowledge>
+<div>
+    @foreach (var item in Model)
+    {
+        <li>
+            <label>
+                @item.Title
+            </label>
+            <label>
+                @String.Format("{0:g}", item.CreateDate)
+            </label>
+        </li>
+    }
+</div>

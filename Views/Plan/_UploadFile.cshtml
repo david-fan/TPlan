@@ -1,0 +1,38 @@
+﻿@model TeachPlan.UploadFile
+
+@using (Html.BeginForm("UploadFile", "Plan", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>添加资源</legend>
+            @Html.HiddenFor(model => model.planId)
+        <div class="editor-label">
+            类型
+        </div>
+       
+        <div class="editor-label">
+            名称
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileName)
+            @Html.ValidationMessageFor(model => model.fileName)
+        </div>
+        <div class="editor-label">
+            描述
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.fileDesc)
+            @Html.ValidationMessageFor(model => model.fileDesc)
+        </div>
+<div class="editor-label">
+            选择文件
+        </div>
+        <div class="editor-field">
+<input type="file" name="FileUpload" />
+        </div>
+    <input type="submit" name="Submit" id="Submit" value="Upload" />
+       
+    </fieldset>
+}
+

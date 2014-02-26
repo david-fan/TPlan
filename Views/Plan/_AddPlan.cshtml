@@ -1,0 +1,75 @@
+﻿@model TeachPlan.Plan
+<div>
+    @using (Ajax.BeginForm("AddPlan", "Plan", null, new AjaxOptions
+        {
+            // LoadingElementId="loading",
+            // LoadingElementDuration=1,
+            // UpdateTargetId="tabs-1",
+            // InsertionMode = InsertionMode.InsertAfter,
+            HttpMethod = "POST",
+            OnSuccess = "onAddPlanSucess"
+        }, new { @id = "addPlanForm" }))
+    {
+        <div class="editor-label">
+            标题
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Name)
+            @Html.ValidationMessageFor(m => m.Name)
+        </div>
+        <div class="editor-label">
+            作者
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Author)
+            @Html.ValidationMessageFor(model => model.Author)
+        </div>
+        <div class="editor-label">
+            简介
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Desc)
+            @Html.ValidationMessageFor(model => model.Desc)
+        </div>
+        <div class="editor-label">
+            课时名称
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.ClassName)
+            @Html.ValidationMessageFor(m => m.ClassName)
+        </div>
+        <div class="editor-label">
+            单位
+        </div>
+        <div class="editor-field">
+            @Html.TextBoxFor(m => m.Organiser)
+            @Html.ValidationMessageFor(m => m.Organiser)
+        </div>
+        <div class="editor-label">
+            公开
+        </div>
+        <div class="editor-field">
+            @Html.CheckBoxFor(m => m.Public)
+            @Html.ValidationMessageFor(m => m.Public)
+        </div>
+        <div class="editor-label">
+            学科
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.Subject_Id, TeachPlan.Controllers.PlanController.getAllSubjects())
+        </div>
+        <div class="editor-label">
+            年级
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.Grade_Id, TeachPlan.Controllers.PlanController.getAllGrades())
+        </div>
+        <div class="editor-label">
+            教材
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => m.Textbook_Id, TeachPlan.Controllers.PlanController.getAllTextbooks())
+        </div>         
+                  <input id="Submit1" type="submit" value="提交" />                           
+    }
+</div>

@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TeachPlan.Form>
+<div>
+教学组织形式
+
+    @foreach (var item in Model)
+    {
+        <input type="checkbox" name="form" value="@item.Id"/> @item.Name
+    }
+</div>

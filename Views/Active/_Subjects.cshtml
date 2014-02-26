@@ -1,0 +1,8 @@
+﻿@model IEnumerable<TeachPlan.Subject>
+<div>
+适应学科
+    @foreach (var item in Model)
+    {
+        <input type="checkbox" name="subject" value="@item.Id"/> @item.Name
+        }
+</div>

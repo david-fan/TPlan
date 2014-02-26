@@ -1,0 +1,215 @@
+﻿@model Models.PlanDetail
+@{
+    ViewBag.Title = "教学方案";
+}
+<h2>@Model.Name - @Model.Author</h2>
+<p>
+
+</p>
+<script>
+    var dialog;
+    $(function () {
+        $("#tabs").tabs();
+
+        dialog = $('#saveDialog').dialog({
+            autoOpen: false,
+            width: 450,
+            resizable: false,
+            modal: true
+        });
+
+    });
+
+    function OpenAddSctionDialog(data) {
+        dialog.html(data);
+        dialog.dialog('open');
+    }
+    function saveSucess(data) {
+        alert(data);
+    }
+    function OnAddActiveSucess(data) {
+        alert(data);
+        dialog.dialog("close");
+    }
+    function OnAddStep(data) {
+        dialog.html(data);
+        dialog.dialog('open');
+    }
+
+
+</script>
+<div id="saveDialog" title="Address Information">
+</div>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">基础信息</a></li>
+        <li><a href="#tabs-2">教学目标</a></li>
+        <li><a href="#tabs-3">学习者特征分析</a></li>
+        <li><a href="#tabs-4">教学重点难点</a></li>
+        <li><a href="#tabs-5">教学资源准备</a></li>
+        <li><a href="#tabs-6">教学环节(活动)</a></li>
+        <li><a href="#tabs-7">反思评价</a></li>
+    </ul>
+    <!--基础信息-->
+    <div id="tabs-1">
+        <p>
+            @Html.Partial("_Plan", Model)
+        </p>
+    </div>
+    <!--教学目标-->
+    <div id="tabs-2">
+        @Ajax.ActionLink("添加新目标", "AddTarget", "Plan", new { planId = Model.MyId }, new AjaxOptions
+   {
+       OnSuccess = "OpenAddSctionDialog"
+   }, new { @class = "action" })
+        <p>
+            <div>
+                <label>
+                    知识技能
+                </label>
+                <ul>
+                    @foreach (var item in Model.Targets.Where(m => (TeachPlan.TargetType)m.Type == TeachPlan.TargetType.ZhishiJineng))
+                    {
+                        @Html.Partial("_Target", item)
+                    }
+                </ul>
+            </div>
+            <div>
+                <label>
+                    过程方法
+                </label>
+                <ul>
+                    @foreach (var item in Model.Targets.Where(m => (TeachPlan.TargetType)m.Type == TeachPlan.TargetType.GuochengFangfa))
+                    {
+                        @Html.Partial("_Target", item)
+                    }
+                </ul>
+            </div>
+            <div>
+                <label>
+                    情感态度
+                </label>
+                <ul>
+                    @foreach (var item in Model.Targets.Where(m => (TeachPlan.TargetType)m.Type == TeachPlan.TargetType.QingganTaidu))
+                    {
+                        @Html.Partial("_Target", item)
+                    }
+                </ul>
+            </div>
+        </p>
+    </div>
+    <!--学习者特征分析-->
+    <div id="tabs-3">
+        <p>
+            4Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate,
+            pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem.
+            Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia
+            nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo
+            pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem
+            enim, pretium nec, feugiat nec, luctus a, lacus.
+        </p>
+        <p>
+            Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam
+            ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing
+            velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula
+            faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero
+            sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor
+            ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas
+            commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit
+            hendrerit.
+        </p>
+    </div>
+    <!--教学重点难点-->
+    <div id="tabs-4">
+        @Ajax.ActionLink("添加知识点", "AddPoint", "Plan", new { planId = Model.MyId }, new AjaxOptions
+   {
+       OnSuccess = "OpenAddSctionDialog"
+   }, new { @class = "action" })
+        <div>
+            <label>
+                重点
+            </label>
+            <ul>
+                @foreach (var item in Model.Points.Where(m => (TeachPlan.PointType)m.Type == TeachPlan.PointType.Zhongdian))
+                {
+                    @Html.Partial("_Point", item)
+                }
+            </ul>
+        </div>
+        <div>
+            <label>
+                难点
+            </label>
+            <ul>
+                @foreach (var item in Model.Points.Where(m => (TeachPlan.PointType)m.Type == TeachPlan.PointType.Nandian))
+                {
+                    @Html.Partial("_Point", item)
+                }
+            </ul>
+        </div>
+    </div>
+    <!--教学资源准备-->
+    <div id="tabs-5">
+    @Ajax.ActionLink("添加新资源", "UploadFile", "Plan", new { planId = Model.MyId }, new AjaxOptions
+   {
+       OnSuccess = "OpenAddSctionDialog"
+   }, new { @class = "action" })
+        <p>
+            <ul>
+                @foreach (var item in Model.Files)
+                {
+                    <li>
+                   
+
+                        <a href="/plan_@Model.MyId/upload/@item.filePath">@item.fileName</a>
+                        @Html.Label(item.fileDesc)
+                    </li>
+                }
+            </ul>
+        </p>
+    </div>
+    <!--教学环节(活动)-->
+    <div id="tabs-6">
+        @Ajax.ActionLink("添加新活动", "AddActive", "Active", new { planId = Model.MyId }, new AjaxOptions
+   {
+       OnSuccess = "OpenAddSctionDialog"
+   }, new { @class = "action" })
+        <p>
+            <ul>
+                @foreach (var item in Model.Actives)
+                {
+                    <li>
+                        @Html.Partial("_Active", item)
+                    </li>
+                }
+            </ul>
+        </p>
+    </div>
+    <!--反思评价-->
+    <div id="tabs-7">
+     @Ajax.ActionLink("添加反思评价", "AddThink", "Plan", new { planId = Model.MyId }, new AjaxOptions
+   {
+       OnSuccess = "OpenAddSctionDialog"
+   }, new { @class = "action" })
+        <div>
+            <label>
+                反思
+            </label><ul>
+                @foreach (var item in Model.Thinks.Where(m=>m.Type==(int)TeachPlan.ThinkType.Fansi))
+                {
+                    @Html.Label(item.Content)
+                }
+            </ul>
+        </div>
+        <div>
+            <label>
+                评价
+            </label><ul>
+                @foreach (var item in Model.Thinks.Where(m=>m.Type==(int)TeachPlan.ThinkType.Pingjia))
+                {
+                    @Html.Label(item.Content)
+                }
+            </ul>
+        </div>
+    </div>
+</div>

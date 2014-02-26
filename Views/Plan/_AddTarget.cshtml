@@ -1,0 +1,36 @@
+﻿@model TeachPlan.Target
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>添加新目标</legend>
+
+        <div class="editor-label">
+            目标类型
+        </div>
+        <div class="editor-field">
+            @Html.DropDownListFor(m => Model.Type, TeachPlan.Controllers.ActiveController.getAllTargetType())
+        </div>
+
+        <div class="editor-label">
+            基本目标
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Baseic)
+            @Html.ValidationMessageFor(model => model.Baseic)
+        </div>
+
+        <div class="editor-label">
+            高级目标
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Advance)
+            @Html.ValidationMessageFor(model => model.Advance)
+        </div>
+        @Html.HiddenFor(model => model.planId)
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}

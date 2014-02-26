@@ -1,0 +1,30 @@
+﻿@model TeachPlan.Active
+@Html.HiddenFor(m => m.Id)
+<div class="editor-label">
+    @Html.LabelFor(m => m.Name)
+</div>
+<div class="editor-field">
+    @Model.Name
+</div>
+<div class="editor-label">
+    @Html.LabelFor(m => m.Subject)
+</div>
+<div class="editor-field">
+    @Model.Subject.Name</div>
+<div class="editor-label">
+    @Html.LabelFor(m => m.Phase)
+</div>
+<div class="editor-field">
+    @Model.Phase.Name</div>
+<div class="editor-label">
+    @Html.LabelFor(m => m.Content)
+</div>
+<div class="editor-field">
+    @Model.Content.Name</div>
+<div class="editor-label">
+    @Html.LabelFor(m => m.Form)
+</div>
+<div class="editor-field">
+    @Model.Form.Name</div>
+@Ajax.ActionLink("删除该活动", "RemoveActive", new { acitveId = Model.Id }, new AjaxOptions { OnSuccess = "onRemoveActive" }, new { @class = "action", @activeId = Model.Id })
+

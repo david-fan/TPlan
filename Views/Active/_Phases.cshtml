@@ -1,0 +1,9 @@
+﻿@model IEnumerable<TeachPlan.Phase>
+<div>
+学习目标层次
+
+    @foreach (var item in Model)
+    {
+        <input type="checkbox" name="phase" value="@item.Id"/> @item.Name
+    }
+</div>

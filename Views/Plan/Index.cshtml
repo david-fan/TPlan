@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "优秀设计方案库";
+}
+<h2>
+    优秀设计方案库</h2>
+<input id="Button1" type="button" value="系统预置" />
+<div>
+    欢迎:</div>
+<div>
+    <input id="Button1" type="button" value="我参与的讨论" />
+    <input id="Button1" type="button" value="我的方案" />
+    <input id="Button1" type="button" value="系统预置" />
+</div>
+<div>
+       @Ajax.ActionLink("添加新方案", "AddPlan", null, new AjaxOptions
+  {
+      OnSuccess = "onAddPlan"
+  }, new { @class = "action" })
+</div>
+<div>
+    <h3>
+        检索</h3>
+    @Html.Partial("_Search")
+</div>
+<div>
+    <h3>
+        最近添加</h3>
+    @Html.Action("LastAddPlans")
+</div>
+<div>
+    <h3>
+        最近浏览</h3>
+    @Html.Action("LastViewPlans")
+</div>
+<div>
+    <h3>
+        最新讨论</h3>
+    @Html.Action("LastCommentPlans")
+</div>
+<script type="text/javascript">
+    var dialog;
+    $(function () {
+        dialog = $('#saveDialog').dialog({
+            autoOpen: false,
+            width: 450,
+            resizable: false,
+            modal: true
+        });
+    });
+    function onAddPlan(data) {
+        dialog.html(data);
+        dialog.dialog('open');
+    }
+    function onAddPlanSucess(date) {
+        alert("onAddPlanSucess");
+    }
+</script>
+
+<div id="saveDialog" title="添加新方案">
+</div>

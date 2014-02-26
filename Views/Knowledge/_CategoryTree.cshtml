@@ -1,0 +1,28 @@
+﻿<script src="@Url.Content("~/Scripts/jquery.treeview.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#navigation").treeview({
+            persist: "location",
+            collapsed: true,
+            unique: true
+        });
+    });
+</script>
+
+@model IEnumerable<Models.KnowledgeCategoryTreeModel>
+<ul id="navigation">
+    @foreach (var parent in Model)
+    {
+        <li><a href="?@parent.Id">@parent.CategoryName</a>
+            @if (parent.ChildCategorys.Count() > 0)
+            {
+                <ul>
+                    @foreach (var child in parent.ChildCategorys)
+                    {
+                        <li class="open"><a href="?@child.Id">@child.CategoryName</a> </li>
+                    }
+                </ul>
+            }
+        </li>
+    }
+</ul>

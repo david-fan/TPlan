@@ -1,0 +1,88 @@
+﻿@model TeachPlan.Active
+<script type="text/template" id="inputTpl">
+		<input type="input" class="input" /></br>
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('#add').click(function(){
+				var tpl = ($('#inputTpl').html());
+				$('#container').append(tpl);
+			});
+			$('#submit').click(function() {
+				var values = new Array();
+				$('.input').each(function(index) {
+					var input = $(this);
+					if (input.val() != '') {
+						values.push(input.val());
+					}
+				});
+				$('#addsteps').val(values.join("$"));
+			});
+		});
+	</script>
+@using (Ajax.BeginForm("AddActive", "Home", new AjaxOptions
+{
+    OnSuccess = "OnAddActiveSucess",
+    UpdateTargetId = "Actives",
+    InsertionMode = InsertionMode.InsertAfter
+}, new { @id = "addActiveForm" }))
+{
+    <div class="editor-label">
+        名称
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div class="editor-label">
+        属性
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.Property)
+        @Html.ValidationMessageFor(m => m.Property)
+    </div>
+
+    <div class="editor-label">
+        条件
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.Condition)
+        @Html.ValidationMessageFor(m => m.Condition)
+    </div>
+    <div class="editor-label">
+        学科
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.Subject_Id, TeachPlan.Controllers.PlanController.getAllSubjects())
+    </div>
+    <div class="editor-label">
+        阶段
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.Phase_Id, TeachPlan.Controllers.PlanController.getAllPhases())
+    </div>
+    <div class="editor-label">
+        内容
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.Content_Id, TeachPlan.Controllers.PlanController.getAllContents())
+    </div>
+    <div class="editor-label">
+        组织形式
+    </div>
+    <div class="editor-field">
+        @Html.DropDownListFor(m => m.Form_Id, TeachPlan.Controllers.PlanController.getAllForms())
+    </div>
+    <div class="editor-label">
+        步骤
+    </div>
+    <div class="editor-field">
+    <div id="container"></div>
+    	@Html.Hidden("addsteps","")
+    <input id="add" type="button" value="add step"/>
+            
+    </div>
+    <input id="submit" type="submit" value="提交" />
+}

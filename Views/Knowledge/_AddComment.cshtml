@@ -1,0 +1,18 @@
+﻿@model TeachPlan.KnowledgeComment
+
+
+@using (Ajax.BeginForm("AddComment", "Knowledge", new AjaxOptions
+{
+    OnSuccess = "onAddCommentSucess",
+    UpdateTargetId = "comments",
+    InsertionMode = InsertionMode.InsertAfter
+}, new { @id = "addCommentForm" }))
+{
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Content)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.Content)
+        @Html.ValidationMessageFor(m => m.Content)
+    </div>
+}
