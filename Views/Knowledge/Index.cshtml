@@ -1,12 +1,46 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
+    <script type="text/javascript" src="/Scripts/tiny_mce/tiny_mce.js"></script>
+
+<script type="text/javascript">
+	
+
+</script>
+    <script type="text/javascript">
+		$(document).ready(function() {
+			dialog = $('#saveDialog').dialog({
+	            autoOpen: false,
+	            width: 450,
+	            resizable: false,
+	            modal: true
+	        });
+
+			
+		});
+function OpenAddSctionDialog(data) {
+        dialog.html(data);
+        dialog.dialog('open');
+        tinyMCE.init({
+				mode : "textareas",
+				theme : "simple"
+			});
+    }
+	</script>
+	@Ajax.ActionLink("Add New Knowledge", "AddKnowledge", "Knowledge", null, new AjaxOptions
+   {
+       OnSuccess = "OpenAddSctionDialog"
+   }, new { @class = "action" })
 
 <h2>分类 </h2>
-@Html.Action("CategoryTree");
+@Html.Action("CategoryTree")
 <h2>最近评论</h2>
 @Html.Action("LastCommentKnowledge")
 <h2>最近查看 </h2>
 @Html.Action("LastViewKnowledge")
 <h2>最后添加</h2>
 @Html.Action("LastAddKnowledge")
+
+
+<div id="saveDialog" title="Address Information">
+</div>

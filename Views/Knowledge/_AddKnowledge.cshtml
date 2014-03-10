@@ -1,0 +1,26 @@
+﻿@model TeachPlan.Knowledge
+
+
+@using (Ajax.BeginForm("AddKnowledge", "Knowledge", new AjaxOptions
+{
+    OnSuccess = "onAddKnowledge",
+    UpdateTargetId = "comments",
+    InsertionMode = InsertionMode.InsertAfter
+}, new { @id = "addKnowledgeForm" }))
+{
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Title)
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(m => m.Title)
+        @Html.ValidationMessageFor(m => m.Title)
+    </div>
+    <div class="editor-label">
+        @Html.LabelFor(m => m.Content)
+    </div>
+    <div class="editor-field">
+        @Html.TextAreaFor(m => m.Content,new {id="knowledge_content"})
+        @Html.ValidationMessageFor(m => m.Content)
+    </div>
+}
+

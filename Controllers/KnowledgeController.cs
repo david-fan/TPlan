@@ -65,6 +65,11 @@ namespace TeachPlan.Controllers
             return View("_AddComment");
         }
 
+		public PartialViewResult AddKnowledge()
+		{
+			return PartialView ("_AddKnowledge",new Knowledge());
+		}
+
         public KnowledgeCategory AddCategory(KnowledgeCategory parent)
         {
             var category = new KnowledgeCategory();
