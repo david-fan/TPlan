@@ -18,24 +18,33 @@
   }, new { @class = "action" })
 </div>
 <div>
-    <h3>
-        检索</h3>
+    <fieldset>
+            <legend>检索</legend>
+       
     @Html.Partial("_Search")
+</fieldset>
 </div>
 <div>
-    <h3>
-        最近添加</h3>
+
+    <fieldset>
+            <legend>最近添加</legend>
+        
     @Html.Action("LastAddPlans")
+</fieldset>
 </div>
 <div>
-    <h3>
-        最近浏览</h3>
+    <fieldset>
+            <legend>最近浏览</legend>
+        
     @Html.Action("LastViewPlans")
+</fieldset>
 </div>
 <div>
-    <h3>
-        最新讨论</h3>
+    <fieldset>
+            <legend>最新讨论</legend>
+       
     @Html.Action("LastCommentPlans")
+</fieldset>
 </div>
 <script type="text/javascript">
     var dialog;

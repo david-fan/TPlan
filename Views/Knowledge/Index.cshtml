@@ -1,7 +1,7 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "知识库";
 }
-    <script type="text/javascript" src="/Scripts/tiny_mce/tiny_mce.js"></script>
+    <h2>知识库</h2>
 
 <script type="text/javascript">
 	
@@ -27,20 +27,29 @@ function OpenAddSctionDialog(data) {
 			});
     }
 	</script>
-	@Ajax.ActionLink("Add New Knowledge", "AddKnowledge", "Knowledge", null, new AjaxOptions
+	@Ajax.ActionLink("添加新知识", "AddKnowledge", "Knowledge", null, new AjaxOptions
    {
        OnSuccess = "OpenAddSctionDialog"
    }, new { @class = "action" })
-
-<h2>分类 </h2>
+<div>
+   <fieldset>
+            <legend>分类</legend>
 @Html.Action("CategoryTree")
-<h2>最近评论</h2>
-@Html.Action("LastCommentKnowledge")
-<h2>最近查看 </h2>
-@Html.Action("LastViewKnowledge")
-<h2>最后添加</h2>
-@Html.Action("LastAddKnowledge")
+            </fieldset>
+            </div>
+            <div><fieldset><legend>最近评论</legend>
 
+@Html.Action("LastCommentKnowledge")
+            </fieldset></div>
+<div><fieldset><legend>最近查看</legend>
+@Html.Action("LastViewKnowledge")
+           </fieldset></div>
+   <div>
+        <fieldset>
+            <legend>最后添加</legend>
+@Html.Action("LastAddKnowledge")
+            </fieldset>
+            </div>
 
 <div id="saveDialog" title="Address Information">
 </div>

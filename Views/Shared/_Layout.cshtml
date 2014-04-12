@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    
+	    
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/themes/base/css")
     @Scripts.Render("~/bundles/jquery")
@@ -12,6 +12,7 @@
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/modernizr")
     @RenderSection("scripts", required: false)
+    <script type="text/javascript" src="/Scripts/tiny_mce/tiny_mce.js"></script>
 </head>
 <body>
     @RenderBody()

@@ -1,10 +1,18 @@
 ﻿@{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "活动模块库";
 }
-
+<h2>活动模块库</h2>
+    <div>
+    <fieldset>
+            <legend>检索</legend>
 @Html.Action("Subjects")
 @Html.Action("Phases")
 @Html.Action("Contents")
 @Html.Action("Forms")
-
+           </fieldset>
+</div>
+<div>
+    <fieldset>
+            <legend>活动列表</legend>
 @Html.Action("Actives")
+            </fieldset></div>

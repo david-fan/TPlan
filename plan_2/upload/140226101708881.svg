@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1"
+	 id="svg2" sodipodi:docname="IntelProcessorRoadmap.svg" inkscape:output_extension="org.inkscape.output.svg.inkscape" sodipodi:version="0.32" inkscape:version="0.48.0 r9654" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1168.782px"
+	 height="208.137px" viewBox="0 0 1168.782 208.137" enable-background="new 0 0 1168.782 208.137" xml:space="preserve">
+<defs>
+	
+	
+		<inkscape:perspective  id="perspective113" inkscape:vp_z="746 : 63.421631 : 1" inkscape:persp3d-origin="373 : 42.281087 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 63.421631 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3096" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3130" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3130-6" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3320" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3345" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3528" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3553" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3586" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3611" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3636" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3661" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3686" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4510" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4535" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4560" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4601" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4626" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4665" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4690" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4715" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4740" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4765" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4790" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4815" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4840" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4865" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4890" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4915" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4975" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective4997" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5032" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5058" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5080" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective5102" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3001" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3026" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3052" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3248" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3284" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3306" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3306-5" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3342" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+	
+		<inkscape:perspective  id="perspective3367" inkscape:vp_z="1 : 0.5 : 1" inkscape:persp3d-origin="0.5 : 0.33333333 : 1" inkscape:vp_y="0 : 1000 : 0" sodipodi:type="inkscape:persp3d" inkscape:vp_x="0 : 0.5 : 1">
+		</inkscape:perspective>
+</defs>
+<sodipodi:namedview  id="base" gridtolerance="10000" pagecolor="#ffffff" bordercolor="#666666" fit-margin-left="0" fit-margin-bottom="0" guidetolerance="10" fit-margin-right="0" fit-margin-top="0" inkscape:window-maximized="0" inkscape:guide-bbox="true" objecttolerance="10" borderopacity="1.0" inkscape:cy="168.65975" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="4" inkscape:cx="92.187159" inkscape:document-units="px" inkscape:current-layer="layer1" showguides="true" inkscape:window-width="1680" inkscape:window-height="997" inkscape:window-x="0" inkscape:window-y="2" showgrid="false">
+	</sodipodi:namedview>
+<g id="layer1" transform="translate(53.318794,-917.84515)" inkscape:groupmode="layer" inkscape:label="Layer 1">
+	<text transform="matrix(1 0 0 1 581.8008 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<g id="g3585" transform="translate(82.5263,6)">
+	</g>
+	<path id="path3631" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M656.27,1033.812v1h11.344v1.5l3.469-2
+		l-3.469-2v1.5H656.27z"/>
+	<g id="g3643">
+	</g>
+	<path id="path3587" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccccc" d="M325.531,988.981l-0.875,0.5
+		l14.062,24.344h-17.906v1h31.344v1.5l3.469-2l-3.469-2v1.5h-12.281L325.531,988.981z"/>
+	<path id="rect3633" fill="#FFFF81" stroke="#4D4D4D" d="M-47.819,918.345h390.464c2.761,0,5,2.238,5,5v70.394c0,2.761-2.239,5-5,5
+		H-47.819c-2.761,0-5-2.239-5-5v-70.394C-52.819,920.583-50.58,918.345-47.819,918.345z"/>
+	<text transform="matrix(1 0 0 1 -47.6435 932.1919)" font-family="'ArialMT'" font-size="12">Willamette</text>
+	<text transform="matrix(1 0 0 1 62.8712 932.1919)" font-family="'ArialMT'" font-size="12">Northwood</text>
+	<text transform="matrix(1 0 0 1 166.2989 932.1919)" font-family="'ArialMT'" font-size="12">Prescott</text>
+	<text transform="matrix(1 0 0 1 235.2369 932.1919)" fill="#FF0000" font-family="'ArialMT'" font-size="12">Tejas</text>
+	<text transform="matrix(1 0 0 1 285.1309 932.1919)" fill="#FF0000" font-family="'ArialMT'" font-size="12">Nehalem</text>
+	<path id="path2274" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M58.063,926.312v1.5H21.219v1h36.844v1.5
+		l3.438-2L58.063,926.312z"/>
+	<path id="path3455" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M161.281,926.312v1.5h-30.844v1h30.844v1.5
+		l3.469-2L161.281,926.312z"/>
+	<path id="path3457" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" fill="#FF0000" d="M229.031,926.312v1.5
+		h-10.844v1h10.844v1.5l3.438-2L229.031,926.312z"/>
+	<path id="path3459" inkscape:connector-curvature="0" fill="#FF0000" d="M280.125,926.312v1.5h-10.844v1h10.844v1.5l3.472-2
+		L280.125,926.312z"/>
+	<text transform="matrix(1 0 0 1 255.856 952.1919)" fill="#FF0000" font-family="'ArialMT'" font-size="12">Cedarmill</text>
+	<path id="path3465" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccc" fill="#FF0000" d="M238.281,937.125v11.688
+		h11.344v1.5l3.468-2l-3.468-2v1.5h-10.344v-10.688H238.281z"/>
+	<path id="path3523" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccccc" d="M174.635,937.125v31.688h11.344v1.5
+		l3.469-2l-3.469-2v1.5h-10.344v-30.688H174.635z"/>
+	<text transform="matrix(1 0 0 1 192.2989 972.1919)" font-family="'ArialMT'" font-size="12">Prescott-2M</text>
+	<text transform="matrix(1 0 0 1 281.9791 972.1919)" font-family="'ArialMT'" font-size="12">Cedar Mill</text>
+	<path id="path3535" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M265.247,967.812v1h11.347v1.5l3.469-2
+		l-3.469-2v1.5H265.247z"/>
+	<text transform="matrix(1 0 0 1 202.899 992.1919)" font-family="'ArialMT'" font-size="12">Smithfield</text>
+	<path id="path3543" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M265.247,987.812v1h11.347v1.5l3.469-2
+		l-3.469-2v1.5H265.247z"/>
+	<text transform="matrix(1 0 0 1 281.9791 992.1919)" font-family="'ArialMT'" font-size="12">Presler</text>
+	<text transform="matrix(1 0 0 1 50.1983 972.6167)" fill="#666666" font-family="'ArialMT'" font-size="12">NetBurst</text>
+	<g id="g3504">
+		<path id="rect3679" fill="#81FF81" stroke="#4D4D4D" d="M361.5,994.181h124c2.765,0,5,2.239,5,5v40.75c0,2.762-2.235,5-5,5h-124
+			c-2.761,0-5-2.238-5-5v-40.75C356.5,996.42,358.739,994.181,361.5,994.181z"/>
+		<text transform="matrix(1 0 0 1 357.5401 1023.1899)" font-family="'ArialMT'" font-size="12">Conroe</text>
+		<text transform="matrix(1 0 0 1 357.5401 1038.1899)" font-family="'ArialMT'" font-size="12">Kentsfield</text>
+		<path id="path3595" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M418.763,1033.216v1h11.344v1.5l3.469-2
+			l-3.469-2v1.5H418.763z"/>
+		<path id="path3603" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M402.763,1018.812v1h27.344v1.5l3.469-2
+			l-3.469-2v1.5H402.763z"/>
+		<text transform="matrix(1 0 0 1 436.192 1023.1899)" font-family="'ArialMT'" font-size="12">Wolfdale</text>
+		<text transform="matrix(1 0 0 1 436.192 1038.1899)" font-family="'ArialMT'" font-size="12">Yorkfield</text>
+		<text transform="matrix(1 0 0 1 409.584 1008.5874)" fill="#666666" font-family="'ArialMT'" font-size="12">Core</text>
+	</g>
+	<g id="g3633">
+		<path id="rect3681" fill="#81C0FF" stroke="#4D4D4D" d="M511,1005.431h140.25c2.764,0,5,2.239,5,5v29.5c0,2.762-2.236,5-5,5H511
+			c-2.761,0-5-2.238-5-5v-29.5C506,1007.67,508.239,1005.431,511,1005.431z"/>
+		<text transform="matrix(1 0 0 1 506.3775 1038.1899)" font-family="'ArialMT'" font-size="12">Nehalem</text>
+		<text transform="matrix(1 0 0 1 592.6973 1038.1899)" font-family="'ArialMT'" font-size="12">Westmere</text>
+		<path id="path3627" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M561.69,1033.812v1h26.016v1.5l3.473-2
+			l-3.473-2v1.5H561.69z"/>
+		<text transform="matrix(1 0 0 1 554.1778 1020.0483)" fill="#666666" font-family="'ArialMT'" font-size="12">Nehalem</text>
+	</g>
+	<g id="g4951" transform="translate(211.07709,0)">
+		<text transform="matrix(1 0 0 1 594.1945 932.2583)" font-family="'ArialMT'" font-size="12">Released</text>
+		<text transform="matrix(1 0 0 1 648.5402 932.2583)" font-family="'ArialMT'" font-size="12">·</text>
+		<text transform="matrix(1 0 0 1 656.3566 932.2583)" fill="#FF0000" font-family="'ArialMT'" font-size="12">Canceled</text>
+		<text transform="matrix(1 0 0 1 715.6886 932.2583)" font-family="'ArialMT'" font-size="12">·</text>
+		<text transform="matrix(1 0 0 1 723.505 932.2583)" fill="#0000FF" font-family="'ArialMT'" font-size="12">Future</text>
+		<text transform="matrix(1 0 0 1 765.423 932.2583)" font-family="'ArialMT'" font-size="12">·</text>
+		<text transform="matrix(1 0 0 1 773.2394 932.2583)" fill="#666666" font-family="'ArialMT'" font-size="12">Microarchitecture name</text>
+	</g>
+	<g id="g3396" transform="translate(14,0)">
+		<path id="rect3683" fill="#CCCCCC" stroke="#4D4D4D" d="M663,1005.431h153.75c2.764,0,5,2.239,5,5v29.5c0,2.762-2.236,5-5,5H663
+			c-2.762,0-5-2.238-5-5v-29.5C658,1007.67,660.238,1005.431,663,1005.431z"/>
+		<text transform="matrix(1 0 0 1 658.8829 1038.1899)" font-family="'ArialMT'" font-size="12">Sandy Bridge</text>
+		<text transform="matrix(1 0 0 1 699.6739 1020.0483)" fill="#666666" font-family="'ArialMT'" font-size="12">Sandy Bridge</text>
+		<path id="path3631-0" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc"  d="M742.27,1033.812v1
+			h11.344v1.5l3.469-2l-3.469-2v1.5H742.27z"/>
+		<text transform="matrix(1 0 0 1 758.8829 1038.1899)" font-family="'ArialMT'" font-size="12">Ivy Bridge</text>
+	</g>
+	<path id="path3631-4" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" fill="#0000FF" d="M836.27,1033.812v1
+		h11.344v1.5l3.469-2l-3.469-2v1.5H836.27z"/>
+	<text transform="matrix(1 0 0 1 335.981 1064.4312)" font-family="'ArialMT'" font-size="10">65</text>
+	<text transform="matrix(1 0 0 1 347.1041 1064.4312)" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 349.1041 1064.4312)" font-family="'ArialMT'" font-size="10">nm</text>
+	<text transform="matrix(1 0 0 1 424.8755 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 491.3072 1064.4312)" font-family="'ArialMT'" font-size="10">45</text>
+	<text transform="matrix(1 0 0 1 502.4302 1064.4312)" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 504.4302 1064.4312)" font-family="'ArialMT'" font-size="10">nm</text>
+	<text transform="matrix(1 0 0 1 762.3809 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 659.9239 1064.4312)" font-family="'ArialMT'" font-size="10">32</text>
+	<text transform="matrix(1 0 0 1 671.0469 1064.4312)" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 673.0469 1064.4312)" font-family="'ArialMT'" font-size="10">nm</text>
+	<text transform="matrix(1 0 0 1 908.3809 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 823.2286 1064.4312)" font-family="'ArialMT'" font-size="10">22</text>
+	<text transform="matrix(1 0 0 1 834.3516 1064.4312)" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 836.3516 1064.4312)" font-family="'ArialMT'" font-size="10">nm</text>
+	<text transform="matrix(1 0 0 1 -25.6835 1064.4312)" font-family="'ArialMT'" font-size="10">180</text>
+	<text transform="matrix(1 0 0 1 -8.9985 1064.4312)" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 -6.9985 1064.4312)" font-family="'ArialMT'" font-size="10">nm</text>
+	<text transform="matrix(1 0 0 1 33.0655 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 79.5875 1064.4312)" font-family="'ArialMT'" font-size="10">130</text>
+	<text transform="matrix(1 0 0 1 96.2725 1064.4312)" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 98.2725 1064.4312)" font-family="'ArialMT'" font-size="10">nm</text>
+	<text transform="matrix(1 0 0 1 201.7491 1064.4312)" font-family="'ArialMT'" font-size="10">90</text>
+	<text transform="matrix(1 0 0 1 212.8721 1064.4312)" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 214.8721 1064.4312)" font-family="'ArialMT'" font-size="10">nm</text>
+	<text transform="matrix(1 0 0 1 156.3433 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 271.3589 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 -54.1977 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<path id="path3631-40" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M490.269,1033.812v1h11.344v1.5l3.469-2
+		l-3.469-2v1.5H490.269z"/>
+	<g id="g3488" transform="translate(14,0)">
+		<path id="rect3683-7" fill="#99FFFF" stroke="#4D4D4D" d="M843,1005.431h110.078c2.764,0,5,2.239,5,5v29.5c0,2.762-2.236,5-5,5
+			H843c-2.762,0-5-2.238-5-5v-29.5C838,1007.67,840.238,1005.431,843,1005.431z"/>
+		<text transform="matrix(1 0 0 1 874.7598 1020.0483)" fill="#666666" font-family="'ArialMT'" font-size="12">Haswell</text>
+		<text transform="matrix(1 0 0 1 838.8829 1038.1899)" fill="#0000FF" font-family="'ArialMT'" font-size="12">Haswell</text>
+		<path id="path3631-4-4" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" fill="#0000FF" d="M886.27,1033.812v1
+			h11.344v1.5l3.469-2l-3.469-2v1.5H886.27z"/>
+		<text transform="matrix(1 0 0 1 902.8829 1038.1899)" fill="#0000FF" font-family="'ArialMT'" font-size="12">Broadwell</text>
+		<text transform="matrix(1 0 0 1 838.8829 1038.1899)" fill="#0000FF" font-family="'ArialMT'" font-size="12">Haswell</text>
+		<path id="rect3683-7_1_" fill="#BECAFF" stroke="#4D4D4D" d="M979.307,1005.431h116.85c2.934,0,5.309,2.239,5.309,5v29.5
+			c0,2.762-2.375,5-5.309,5h-116.85c-2.93,0-5.307-2.238-5.307-5v-29.5C974,1007.67,976.377,1005.431,979.307,1005.431z"/>
+		<text transform="matrix(1 0 0 1 1013.7598 1020.312)" fill="#666666" font-family="'ArialMT'" font-size="12">Skylake</text>
+		<path id="path3631-4-4_1_" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" fill="#0000FF" d="M1026.785,1033.812
+			v1h11.346v1.5l3.469-2l-3.469-2v1.5H1026.785z"/>
+		<text transform="matrix(1 0 0 1 1048.5488 1036.9097)" fill="#0000FF" font-family="'ArialMT'" font-size="12">Skymont</text>
+		<text transform="matrix(1 0 0 1 977.8829 1037.1899)" fill="#0000FF" font-family="'ArialMT'" font-size="12">Skylake</text>
+	</g>
+	<text transform="matrix(1 0 0 1 1048.1914 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 972.0782 1064.4312)" fill="#0000FF" font-family="'ArialMT'" font-size="10">14</text>
+	<text transform="matrix(1 0 0 1 938.4122 1064.4312)" fill="#0000FF" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 986.8907 1064.4312)" fill="#0000FF" font-family="'ArialMT'" font-size="10">nm</text>
+	<g id="g3669" transform="translate(0,-12)">
+		<path id="rect3681-0" fill="#FFEEAA" stroke="#4D4D4D" d="M431.254,1091.232h227.587c2.762,0,5,2.621,5,5.854v34.543
+			c0,3.232-2.238,5.854-5,5.854H431.254c-2.765,0-5-2.621-5-5.854v-34.543C426.254,1093.853,428.493,1091.232,431.254,1091.232z"/>
+		<text transform="matrix(1 0 0 1 529.647 1103.48)" fill="#666666" font-family="'ArialMT'" font-size="12">Atom</text>
+		<text transform="matrix(1 0 0 1 429.0045 1118.7319)" font-family="'ArialMT'" font-size="12">Silverthorne</text>
+		<text transform="matrix(1 0 0 1 429.0045 1133.7319)" font-family="'ArialMT'" font-size="12">Diamondville</text>
+		<text transform="matrix(1 0 0 1 525.8912 1118.7319)" font-family="'ArialMT'" font-size="12">Lincroft</text>
+		<text transform="matrix(1 0 0 1 525.8912 1133.7319)" font-family="'ArialMT'" font-size="12">Pineview</text>
+		<path id="path3615-7" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M510.161,1129.505v1h11.347v1.5l3.469-2
+			l-3.469-2v1.5C521.504,1129.505,523.733,1129.505,510.161,1129.505z"/>
+		<path id="path3615-7-7" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M504.161,1114.887v1h17.347v1.5
+			l3.469-2l-3.469-2v1.5C521.504,1114.887,517.733,1114.887,504.161,1114.887z"/>
+		<path id="path3624" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M510.161,1129.505v1h11.347v1.5l3.469-2
+			l-3.469-2v1.5C521.504,1129.505,523.733,1129.505,510.161,1129.505z"/>
+		<path id="path3615-7-5" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M580.922,1129.505v1h11.344v1.5
+			l3.469-2l-3.469-2v1.5C592.266,1129.505,594.494,1129.505,580.922,1129.505z"/>
+		<text transform="matrix(1 0 0 1 597.8907 1133.7319)" font-family="'ArialMT'" font-size="12">Cedarview</text>
+	</g>
+	<g id="g3828">
+		<path id="rect3677" fill="#FFB181" stroke="#4D4D4D" d="M-47.819,1002.34h367.381c2.762,0,5,2.239,5,5v32.591c0,2.762-2.238,5-5,5
+			H-47.819c-2.761,0-5-2.238-5-5v-32.591C-52.819,1004.579-50.58,1002.34-47.819,1002.34z"/>
+		<path id="path3551" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M243.247,1013.812v1h33.344v1.5l3.469-2
+			l-3.469-2v1.5H243.247z"/>
+		<text transform="matrix(1 0 0 1 281.9791 1018.1899)" font-family="'ArialMT'" font-size="12">Yonah</text>
+		<text transform="matrix(1 0 0 1 194.46 1018.1899)" font-family="'ArialMT'" font-size="12">Dothan</text>
+		<text transform="matrix(1 0 0 1 112.0811 1018.1899)" font-family="'ArialMT'" font-size="12">Banias</text>
+		<path id="path3575" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M154.231,1013.812v1h33.344v1.5l3.469-2
+			l-3.469-2v1.5H154.231z"/>
+		<text transform="matrix(1 0 0 1 128.2222 1036.9097)" fill="#666666" font-family="'ArialMT'" font-size="12">P6</text>
+		<text transform="matrix(1 0 0 1 48.0811 1018.1899)" font-family="'ArialMT'" font-size="12">Tualatin</text>
+		<path id="path3575-6" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M96.231,1013.812v1h11.344v1.5l3.469-2
+			l-3.469-2v1.5H96.231z"/>
+		<text transform="matrix(1 0 0 1 -47.9189 1018.1899)" font-family="'ArialMT'" font-size="12">Coppermine</text>
+		<path id="path3575-6-3" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" d="M30.231,1013.812v1h11.344v1.5
+			l3.469-2l-3.469-2v1.5H30.231z"/>
+	</g>
+	<path id="path3631-4_1_" inkscape:connector-curvature="0" sodipodi:nodetypes="cccccccc" fill="#0000FF" d="M972.078,1033.216v1
+		h11.344v1.5l3.469-2l-3.469-2v1.5H972.078z"/>
+	<text transform="matrix(1 0 0 1 1113.1289 1064.4312)" font-family="'ArialMT'" font-size="10">|</text>
+	<text transform="matrix(1 0 0 1 1071.8828 1064.4312)" fill="#0000FF" font-family="'ArialMT'" font-size="10">10</text>
+	<text transform="matrix(1 0 0 1 1083.0059 1064.4312)" fill="#0000FF" font-family="'ArialMT'" font-size="10"> </text>
+	<text transform="matrix(1 0 0 1 1085.0059 1064.4312)" fill="#0000FF" font-family="'ArialMT'" font-size="10">nm</text>
+</g>
+</svg>

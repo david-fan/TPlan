@@ -62,7 +62,7 @@
    {
        OnSuccess = "OpenAddSctionDialog"
    }, new { @class = "action" })
-        <p>
+        <div>
             <div>
                 <label>
                     知识技能
@@ -96,7 +96,7 @@
                     }
                 </ul>
             </div>
-        </p>
+        </div>
     </div>
     <!--学习者特征分析-->
     <div id="tabs-3">
@@ -154,7 +154,7 @@
    {
        OnSuccess = "OpenAddSctionDialog"
    }, new { @class = "action" })
-        <p>
+        <div>
             <ul>
                 @foreach (var item in Model.Files)
                 {
@@ -166,7 +166,7 @@
                     </li>
                 }
             </ul>
-        </p>
+        </div>
     </div>
     <!--教学环节(活动)-->
     <div id="tabs-6">
@@ -174,7 +174,7 @@
    {
        OnSuccess = "OpenAddSctionDialog"
    }, new { @class = "action" })
-        <p>
+        <div>
             <ul>
                 @foreach (var item in Model.Actives)
                 {
@@ -183,7 +183,7 @@
                     </li>
                 }
             </ul>
-        </p>
+        </div>
     </div>
     <!--反思评价-->
     <div id="tabs-7">
