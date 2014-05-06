@@ -4,8 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{93853494-DF9A-41A5-BA94-90510F656FA5}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -228,11 +227,9 @@
     <Content Include="Views\Active\_Phases.cshtml" />
     <Content Include="Views\Active\_Subjects.cshtml" />
     <Content Include="Views\Active\Index.cshtml" />
-    <Content Include="Views\Knowledge\_AddComment.cshtml" />
     <Content Include="Views\Knowledge\_CategoryTree.cshtml" />
     <Content Include="Views\Knowledge\_KnowledgeList.cshtml" />
     <Content Include="Views\Knowledge\Index.cshtml" />
-    <Content Include="Views\Knowledge\KnowledgeDetail.cshtml" />
     <Content Include="Views\Plan\_Active.cshtml" />
     <Content Include="Views\Plan\_AddPlan.cshtml" />
     <Content Include="Views\Plan\_AddPoint.cshtml" />
@@ -524,6 +521,9 @@
     <Content Include="Scripts\tiny_mce\utils\mctabs.js" />
     <Content Include="Scripts\tiny_mce\utils\validate.js" />
     <Content Include="Views\Knowledge\_AddKnowledge.cshtml" />
+    <Content Include="Views\Knowledge\_KnowledgeDetail.cshtml" />
+    <Content Include="Views\Shared\_Comments.cshtml" />
+    <Content Include="Views\Shared\_AddComment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

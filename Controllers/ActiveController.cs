@@ -33,21 +33,22 @@ namespace TeachPlan.Controllers
             return Json(true);
         }
 
-        [HttpPost]
-        public JsonResult AddComment(Active active)
-        {
-            var service = new ActiveCommentService();
-            var comment = new ActiveComment();
-            comment.Active_Id = active.MyId;
-            service.Create(comment);
-            return Json(true);
-        }
+		[HttpPost]
+		public JsonResult AddComment(Comment comment)
+		{
+			var service = new CommentService();
+			service.Create(comment);
+			return Json(true);
+		}
 
-        [HttpGet]
-        public ViewResult AddComment()
-        {
-            return View("_AddComment");
-        }
+		[HttpGet]
+		public PartialViewResult AddComment(int activeId)
+		{
+			var comment = new Comment();
+			comment.To_Type = (int)ToType.Active;
+			comment.To_Id = activeId;
+			return PartialView ("_AddComment", comment);
+		}
 
         public PartialViewResult Subjects()
         {
@@ -73,12 +74,13 @@ namespace TeachPlan.Controllers
             return PartialView("_Contents", service.GetAll());
         }
 
-        public PartialViewResult Actives()
-        {
-            var service = new ActiveService();
-            var enumer = service.GetByUserId(int.Parse(Session["user"].ToString()));
-            return PartialView("_Actives", enumer);
-        }
+		public PartialViewResult SerachActives(int userId,int formId,int subjectId,int phaseId,int contentId)
+		{
+			var service = new ActiveService();
+			var enumer = service.GetByUserId(userId,formId,subjectId,phaseId,contentId);
+			return PartialView("_Actives", enumer);
+		}
+
 
         public static IEnumerable<SelectListItem> getAllTargetType()
         {

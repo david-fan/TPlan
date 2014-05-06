@@ -1,0 +1,11 @@
+﻿@model IEnumerable<TeachPlan.Comment>
+<div>
+    @foreach (var item in Model)
+    {
+        <li>
+            
+            @item.Content-@item.CreateDate
+
+        </li>
+    }
+</div>

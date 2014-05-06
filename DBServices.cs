@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using TeachPlan;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -99,11 +100,7 @@ public class GradeService : EntityService<Grade>
         return comments;
     }
 }
-
-public class ActiveCommentService : EntityService<ActiveComment>
-{
-}
-
+	
 public class ActiveService : EntityService<Active>
 {
     public IEnumerable<Active> GetByPlan(int planId)
@@ -112,10 +109,20 @@ public class ActiveService : EntityService<Active>
         var results = this.MongoConnectionHandler.MongoCollection.Find(query);
         return results;
     }
-    public IEnumerable<Active> GetByUserId(int userId)
+	public IEnumerable<Active> GetByUserId(int userId,int formId,int subjectId,int phaseId,int contentId)
     {
-        var query = Query<Active>.EQ(e => e.UserInfo_Id, userId);
-        var results = this.MongoConnectionHandler.MongoCollection.Find(query);
+		var queries = new List<IMongoQuery> ();
+		if (userId > 0)
+			queries.Add (Query<Active>.EQ (e => e.UserInfo_Id, userId));
+		if (formId > 0)
+			queries.Add (Query<Active>.EQ (e => e.Form_Id, formId));
+		if (subjectId > 0)
+			queries.Add (Query<Active>.EQ (e => e.Subject_Id, subjectId));
+		if (phaseId > 0)
+			queries.Add (Query<Active>.EQ (e => e.Phase_Id, phaseId));
+		if (contentId > 0)
+			queries.Add (Query<Active>.EQ (e => e.Content_Id, contentId));
+		var results = this.MongoConnectionHandler.MongoCollection.Find(Query.And(queries));
         return results;
     }
 }
@@ -133,7 +140,8 @@ public class KnowledgeCategoryService : EntityService<KnowledgeCategory>
 public enum ToType
 {
     Plan = 1,
-    Knowledge = 2
+	Knowledge = 2,
+	Active=3
 }
 
 public class ViewlogService : EntityService<ViewLog>

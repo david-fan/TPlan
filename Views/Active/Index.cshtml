@@ -3,12 +3,22 @@
 }
 <h2>活动模块库</h2>
     <div>
+
     <fieldset>
             <legend>检索</legend>
+            @using (Ajax.BeginForm("SearchActive", "Active", new AjaxOptions
+{
+    OnSuccess = "OnSearchActiveSuccess",
+    UpdateTargetId = "Actives",
+    InsertionMode = InsertionMode.InsertAfter
+}, new { @id = "serachActiveForm" }))
+{
 @Html.Action("Subjects")
 @Html.Action("Phases")
 @Html.Action("Contents")
 @Html.Action("Forms")
+    <input type="submit" value="Submit"/>
+    }
            </fieldset>
 </div>
 <div>

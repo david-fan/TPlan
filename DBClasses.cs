@@ -100,6 +100,7 @@ namespace TeachPlan
 		public string Advance { get; set; }
 	}
 	#endregion
+	/*
 	public class ActiveComment : MongoEntity
 	{
 		public string Content { get; set; }
@@ -108,7 +109,7 @@ namespace TeachPlan
 
 		public int UserInfo_Id { get; set; }
 	}
-
+*/
 	public class Active : MongoEntity
 	{
 		public string Name { get; set; }

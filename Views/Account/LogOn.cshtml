@@ -5,9 +5,9 @@
 }
 @if (Session["user"] != null)
 {
-    @Html.ActionLink("Plan", "Index", "Plan");<br />
-    @Html.ActionLink("Active", "Index", "Active");<br />
-    @Html.ActionLink("Knowledge", "Index", "Knowledge");
+    @Html.ActionLink("教学计划库", "Index", "Plan")<br />
+    @Html.ActionLink("活动库", "Index", "Active")<br />
+    @Html.ActionLink("知识库", "Index", "Knowledge")
 }
 else
 {

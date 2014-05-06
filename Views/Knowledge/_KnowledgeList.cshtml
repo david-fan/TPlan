@@ -4,7 +4,7 @@
     {
         <li>
             <label>
-                @item.Title
+            @Html.ActionLink(item.Title,"KnowledgeDetail",new {id=item.MyId})
             </label>
             <label>
                 @String.Format("{0:g}", item.CreateDate)

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using Models;
 
@@ -43,31 +44,57 @@ namespace TeachPlan.Controllers
             return PartialView("_KnowledgeList", enumer);
         }
 
-        public Comment[] GetCommentByKnowledge(Knowledge knowledge)
+		public PartialViewResult KnowledgeComments(int knowledgeId)
+		{
+			return PartialView ("_Comments", GetCommentByKnowledge(knowledgeId));
+		}
+
+		public Comment[] GetCommentByKnowledge(int knowledgeId)
         {
             var service = new CommentService();
-            var enumer = service.GetKnowledgeComments(knowledge.MyId);
+			var enumer = service.GetKnowledgeComments(knowledgeId);
             return enumer.ToArray();
         }
 
         [HttpPost]
-        public JsonResult AddComment(Knowledge knowledge)
+		public JsonResult AddComment(Comment comment)
         {
             var service = new CommentService();
-            var comment = new Comment();
             service.Create(comment);
             return Json(true);
         }
 
-        [HttpGet]
-        public ViewResult AddComment()
-        {
-            return View("_AddComment");
-        }
-
+		[HttpGet]
+		public PartialViewResult AddComment(int knowledgeId)
+		{
+			var comment = new Comment();
+			comment.To_Type = (int)ToType.Knowledge;
+			comment.To_Id = knowledgeId;
+			return PartialView ("_AddComment", comment);
+		}
+			
+		[HttpGet]
 		public PartialViewResult AddKnowledge()
 		{
 			return PartialView ("_AddKnowledge",new Knowledge());
+		}
+			
+		[HttpPost]
+		[ValidateInput(false)]
+		public JsonResult AddKnowledge(Knowledge knowledge)
+		{
+			var service = new KnowledgeService ();
+			//FormCollection collection = new FormCollection(Request.Unvalidated().Form);
+
+			service.Create (knowledge);
+			return Json (true);
+		}
+
+		public ViewResult KnowledgeDetail(int id)
+		{
+			var service = new KnowledgeService ();
+			var knowlege = service.GetById (id);
+			return View ("_KnowledgeDetail", knowlege);
 		}
 
         public KnowledgeCategory AddCategory(KnowledgeCategory parent)

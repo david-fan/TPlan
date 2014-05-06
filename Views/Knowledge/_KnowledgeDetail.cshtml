@@ -1,0 +1,7 @@
+﻿@model TeachPlan.Knowledge
+<div>@Model.Title</div>
+<div>@Model.CreateDate.ToString("YYYY-MM-DD hh:mm")</div>
+<div>@Html.Raw(Model.Content)</div>
+
+@Html.Action("KnowledgeComments","Knowledge",new {knowledgeId=Model.MyId})
+@Html.Action("AddComment","Knowledge",new {knowledgeId=Model.MyId})

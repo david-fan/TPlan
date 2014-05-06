@@ -26,5 +26,5 @@
 </div>
 <div class="editor-field">
     @Model.Form.Name</div>
-@Ajax.ActionLink("删除该活动", "RemoveActive", new { acitveId = Model.Id }, new AjaxOptions { OnSuccess = "onRemoveActive" }, new { @class = "action", @activeId = Model.Id })
+@Ajax.ActionLink("删除引用该活动", "RemoveActive", new { acitveId = Model.Id }, new AjaxOptions { OnSuccess = "onRemoveActive" }, new { @class = "action", @activeId = Model.Id })
 

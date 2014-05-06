@@ -1,4 +1,4 @@
-﻿@model TeachPlan.KnowledgeComment
+﻿@model TeachPlan.Comment
 
 
 @using (Ajax.BeginForm("AddComment", "Knowledge", new AjaxOptions
@@ -9,10 +9,13 @@
 }, new { @id = "addCommentForm" }))
 {
     <div class="editor-label">
-        @Html.LabelFor(m => m.Content)
+        添加评论
     </div>
     <div class="editor-field">
-        @Html.TextBoxFor(m => m.Content)
+        @Html.TextAreaFor(m => m.Content)
         @Html.ValidationMessageFor(m => m.Content)
     </div>
+@Html.HiddenFor(m=>m.To_Type)
+    @Html.HiddenFor(m=>m.To_Id)
+<input type="submit" value="Submit"/>
 }
