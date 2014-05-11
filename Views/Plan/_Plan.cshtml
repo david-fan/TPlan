@@ -1,43 +1,22 @@
 ﻿@model Models.PlanDetail
-<div class="editor-label">
-    标题
+<div class="editor-field">
+    标题:@Model.Name
 </div>
 <div class="editor-field">
-    @Model.Name
-</div>
-<div class="editor-label">
-    课时名称
+    课时名称:@Model.ClassName
 </div>
 <div class="editor-field">
-    @Model.ClassName
-</div>
-<div class="editor-label">
-    单位
+    单位:@Model.Organiser
 </div>
 <div class="editor-field">
-    @Model.Organiser
-</div>
-<div class="editor-label">
-    公开
+    公开:@Model.Public
 </div>
 <div class="editor-field">
-    @Model.Public
-</div>
-<div class="editor-label">
-    学科
+    学科:@Model.Subject.Name
 </div>
 <div class="editor-field">
-    @Model.Subject.Name
-</div>
-<div class="editor-label">
-    年级
+    年级:@Model.Grade.Name
 </div>
 <div class="editor-field">
-    @Model.Grade.Name
-</div>
-<div class="editor-label">
-    教材
-</div>
-<div class="editor-field">
-    @Model.Textbook.Name
+    教材:@Model.Textbook.Name
 </div>

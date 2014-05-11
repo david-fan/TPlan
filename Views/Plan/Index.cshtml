@@ -14,7 +14,7 @@
 <div>
        @Ajax.ActionLink("添加新方案", "AddPlan", null, new AjaxOptions
   {
-      OnSuccess = "onAddPlan"
+      OnSuccess = "OpenAddSctionDialog"
   }, new { @class = "action" })
 </div>
 <div>
@@ -57,10 +57,6 @@
             modal: true
         });
     });
-    function onAddPlan(data) {
-        dialog.html(data);
-        dialog.dialog('open');
-    }
     function onAddPlanSucess(date) {
         alert("onAddPlanSucess");
     }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TeachPlan.Active>
+﻿@model IEnumerable<TPlan.ActiveDetailModel>
 <table>
     <tr>
         <th>
@@ -29,16 +29,16 @@
                 @item.Condition
             </td>
 <td>
-                @item.Subject_Id
+                @item.Subject.Name
             </td>
 <td>
-                @item.Phase_Id
+                @item.Phase.Name
             </td>
 <td>
-                @item.Content_Id
+                @item.Content.Name
             </td>
 <td>
-                @item.Form_Id
+                @item.Form.Name
             </td>
             <td>
                 <div class="editor-field">

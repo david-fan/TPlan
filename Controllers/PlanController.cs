@@ -224,6 +224,7 @@ namespace TeachPlan.Controllers
 		}
 
 		[HttpPost]
+		[ValidateInput(false)]
 		public JsonResult AddPoint (Point model)
 		{
 			var service = new PlanService ();
@@ -244,6 +245,7 @@ namespace TeachPlan.Controllers
 		}
 
 		[HttpPost]
+		[ValidateInput(false)]
 		public JsonResult AddTarget (Target model)
 		{
 			var service = new PlanService ();
@@ -256,6 +258,7 @@ namespace TeachPlan.Controllers
 		}
 
 		[HttpGet]
+		[ValidateInput(false)]
 		public PartialViewResult AddThink (int planId)
 		{
 			var model = new Think ();
@@ -264,6 +267,7 @@ namespace TeachPlan.Controllers
 		}
 
 		[HttpPost]
+		[ValidateInput(false)]
 		public JsonResult AddTarget (Think model)
 		{
 			var service = new PlanService ();

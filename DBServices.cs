@@ -105,7 +105,7 @@ public class ActiveService : EntityService<Active>
 {
     public IEnumerable<Active> GetByPlan(int planId)
     {
-        var query = Query<Active>.EQ(e => e.Plan_Id, planId);
+		var query = Query<Active>.In(e => e.Plan_Ids, new int[1]{planId});
         var results = this.MongoConnectionHandler.MongoCollection.Find(query);
         return results;
     }

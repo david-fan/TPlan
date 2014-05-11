@@ -123,7 +123,7 @@ namespace TeachPlan
 			set;
 		}
 
-		public int Plan_Id { get; set; }
+		public List<int> Plan_Ids { get; set; }
 
 		public int Subject_Id { get; set; }
 

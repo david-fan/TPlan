@@ -6,11 +6,11 @@
 
     <fieldset>
             <legend>检索</legend>
-            @using (Ajax.BeginForm("SearchActive", "Active", new AjaxOptions
+            @using (Ajax.BeginForm("SearchActives", "Active", new AjaxOptions
 {
     OnSuccess = "OnSearchActiveSuccess",
     UpdateTargetId = "Actives",
-    InsertionMode = InsertionMode.InsertAfter
+    InsertionMode = InsertionMode.Replace
 }, new { @id = "serachActiveForm" }))
 {
 @Html.Action("Subjects")
@@ -21,8 +21,32 @@
     }
            </fieldset>
 </div>
-<div>
+           @Ajax.ActionLink("添加新活动", "AddActive", "Active", new { planId = 0 }, new AjaxOptions
+   {
+       OnSuccess = "OpenAddSctionDialog"
+   }, new { @class = "action" })
     <fieldset>
             <legend>活动列表</legend>
-@Html.Action("Actives")
-            </fieldset></div>
+            <div id="Actives">
+@Html.Action("SearchActives",new {userId=(int)Session["user"],formId=0,subjectId=0,phaseId=0,contentId=0})
+            </div>
+    </fieldset>
+
+    <script>
+    var dialog;
+    $(function () {
+        $("#tabs").tabs();
+        dialog = $('#saveDialog').dialog({
+            autoOpen: false,
+            width: 450,
+            resizable: false,
+            modal: true
+        });
+    });
+    function OnAddActiveSucess(data) {
+        alert(data);
+        dialog.dialog("close");
+    }
+</script>
+<div id="saveDialog" title="增加新活动">
+</div>

@@ -4,7 +4,6 @@
 	</script>
 	<script type="text/javascript">
 		$(document).ready(function() {
-
 			$('#add').click(function(){
 				var tpl = ($('#inputTpl').html());
 				$('#container').append(tpl);
@@ -23,9 +22,7 @@
 	</script>
 @using (Ajax.BeginForm("AddActive", "Home", new AjaxOptions
 {
-    OnSuccess = "OnAddActiveSucess",
-    UpdateTargetId = "Actives",
-    InsertionMode = InsertionMode.InsertAfter
+    OnSuccess = "OnAddActiveSucess"
 }, new { @id = "addActiveForm" }))
 {
     <div class="editor-label">
@@ -80,6 +77,13 @@
     </div>
     <div class="editor-field">
     <div id="container"></div>
+
+    @if(Model.Plan_Ids!=null){
+     	for (var i = 0; i < Model.Plan_Ids.Count(); i++)
+	    {
+	        @Html.HiddenFor(m => m.Plan_Ids[i]);
+	    }
+    }
     	@Html.Hidden("addsteps","")
     <input id="add" type="button" value="add step"/>
             

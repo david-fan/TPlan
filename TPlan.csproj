@@ -126,6 +126,7 @@
     <Compile Include="EntityService.cs" />
     <Compile Include="MongoConnectionHandler.cs" />
     <Compile Include="SystemType.cs" />
+    <Compile Include="Models\ActiveDetailModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -230,7 +231,6 @@
     <Content Include="Views\Knowledge\_CategoryTree.cshtml" />
     <Content Include="Views\Knowledge\_KnowledgeList.cshtml" />
     <Content Include="Views\Knowledge\Index.cshtml" />
-    <Content Include="Views\Plan\_Active.cshtml" />
     <Content Include="Views\Plan\_AddPlan.cshtml" />
     <Content Include="Views\Plan\_AddPoint.cshtml" />
     <Content Include="Views\Plan\_AddTarget.cshtml" />
@@ -242,7 +242,6 @@
     <Content Include="Views\Plan\_Search.cshtml" />
     <Content Include="Views\Plan\_Target.cshtml" />
     <Content Include="Views\Plan\Index.cshtml" />
-    <Content Include="Views\Plan\ViewUserControl1.cshtml" />
     <Content Include="Content\images\ajax-loader.gif" />
     <Content Include="Content\images\file.gif" />
     <Content Include="Content\images\folder-closed.gif" />
@@ -524,6 +523,7 @@
     <Content Include="Views\Knowledge\_KnowledgeDetail.cshtml" />
     <Content Include="Views\Shared\_Comments.cshtml" />
     <Content Include="Views\Shared\_AddComment.cshtml" />
+    <Content Include="Views\Plan\_Active.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

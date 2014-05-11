@@ -16,17 +16,10 @@
 	            modal: true
 	        });
 		});
-function onAddKnowledge(data){
+		function onAddKnowledge(data){
 
 		}
-function OpenAddSctionDialog(data) {
-        dialog.html(data);
-        dialog.dialog('open');
-        tinyMCE.init({
-				mode : "textareas",
-				theme : "simple"
-			});
-    }
+
 	</script>
 	@Ajax.ActionLink("添加新知识", "AddKnowledge", "Knowledge", null, new AjaxOptions
    {

@@ -1,30 +1,19 @@
-﻿@model TeachPlan.Active
-@Html.HiddenFor(m => m.Id)
+﻿@model TPlan.ActiveDetailModel
+
+@Html.HiddenFor(m => m.MyId)
 <div class="editor-label">
-    @Html.LabelFor(m => m.Name)
-</div>
-<div class="editor-field">
-    @Model.Name
+    @Model.Name @Ajax.ActionLink("删除引用该活动", "RemoveActive", new { acitveId = Model.MyId}, new AjaxOptions { OnSuccess = "onRemoveActive" }, new { @class = "action", @activeId = Model.MyId })
 </div>
 <div class="editor-label">
-    @Html.LabelFor(m => m.Subject)
+    学科:@Model.Subject.Name
 </div>
-<div class="editor-field">
-    @Model.Subject.Name</div>
 <div class="editor-label">
-    @Html.LabelFor(m => m.Phase)
+    阶段:@Model.Phase.Name
 </div>
-<div class="editor-field">
-    @Model.Phase.Name</div>
 <div class="editor-label">
-    @Html.LabelFor(m => m.Content)
+    内容:@Model.Content.Name
 </div>
-<div class="editor-field">
-    @Model.Content.Name</div>
 <div class="editor-label">
-    @Html.LabelFor(m => m.Form)
+    阶段:@Model.Form.Name
 </div>
-<div class="editor-field">
-    @Model.Form.Name</div>
-@Ajax.ActionLink("删除引用该活动", "RemoveActive", new { acitveId = Model.Id }, new AjaxOptions { OnSuccess = "onRemoveActive" }, new { @class = "action", @activeId = Model.Id })
 

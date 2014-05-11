@@ -13,6 +13,16 @@
     @Scripts.Render("~/bundles/modernizr")
     @RenderSection("scripts", required: false)
     <script type="text/javascript" src="/Scripts/tiny_mce/tiny_mce.js"></script>
+    <script type="text/javascript">
+    function OpenAddSctionDialog(data) {
+        dialog.html(data);
+        dialog.dialog('open');
+        tinyMCE.init({
+				mode : "textareas",
+				theme : "simple"
+			});
+    }
+    </script>
 </head>
 <body>
     @RenderBody()

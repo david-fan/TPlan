@@ -19,11 +19,6 @@
         });
 
     });
-
-    function OpenAddSctionDialog(data) {
-        dialog.html(data);
-        dialog.dialog('open');
-    }
     function saveSucess(data) {
         alert(data);
     }
@@ -34,9 +29,7 @@
     function OnAddStep(data) {
         dialog.html(data);
         dialog.dialog('open');
-    }
-
-
+    }        
 </script>
 <div id="saveDialog" title="Address Information">
 </div>
@@ -157,7 +150,7 @@
    {
        OnSuccess = "OpenAddSctionDialog"
    }, new { @class = "action" })
-   @Ajax.ActionLink("引用现有活动", "SerachActives", "Active", new { userId = 0, formId=0,subjectId=Model.Subject.MyId,phaseId=0,contentId=0}, new AjaxOptions
+   @Ajax.ActionLink("引用现有活动", "SearchActives", "Active", new { userId = 0, formId=0,subjectId=Model.Subject.MyId,phaseId=0,contentId=0}, new AjaxOptions
    {
        OnSuccess = "OpenAddSctionDialog"
    }, new { @class = "action" })
@@ -166,7 +159,7 @@
                 @foreach (var item in Model.Actives)
                 {
                     <li>
-                        @Html.Partial("_Active", item)
+                        @Html.Partial("_Active", new TPlan.ActiveDetailModel(item))
                     </li>
                 }
             </ul>

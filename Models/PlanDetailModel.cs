@@ -1,10 +1,11 @@
 ﻿using System;
+using TeachPlan;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Models
 {
-    using TeachPlan;
-    using System.Collections;
-    using System.Collections.Generic;
+
     public class PlanDetail : Plan
     {
         public PlanDetail(Plan plan)
