@@ -524,6 +524,9 @@
     <Content Include="Views\Shared\_Comments.cshtml" />
     <Content Include="Views\Shared\_AddComment.cshtml" />
     <Content Include="Views\Plan\_Active.cshtml" />
+    <Content Include="Views\Active\_EditActive.cshtml" />
+    <Content Include="Views\Active\_PreSetSteps.cshtml" />
+    <Content Include="Views\Active\_ActiveSteps.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

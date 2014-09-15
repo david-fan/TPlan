@@ -1,0 +1,20 @@
+﻿@model IEnumerable<TeachPlan.PreSetStep>
+@using (Ajax.BeginForm(
+"AddPreSetStepToActive", 
+new {activeId=ViewData ["activeId"]}, 
+new AjaxOptions
+{
+OnSuccess = "OpenAddSctionDialog",
+    UpdateTargetId="steps"
+}, 
+new { @id = "addStepsForm" }))
+{
+  	foreach (var item in Model)
+    {
+	    <li>
+	    @Html.CheckBox("pss"+item.MyId.ToString())
+	    @Html.Label("pss"+item.MyId.ToString(),item.Content)
+	    </li>
+    }
+    <input id="submit" type="submit" value="提交" />
+}

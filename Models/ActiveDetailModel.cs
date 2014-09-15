@@ -11,7 +11,7 @@ namespace TPlan
 			this.Name = active.Name;
 			this.Steps = active.Steps;
 			this.Property = active.Property;
-			this.Plan_Ids = active.Plan_Ids;
+			this.Plan_Id = active.Plan_Id;
 
 			Phase = new PhaseService ().GetById (active.Phase_Id);
 			Subject = new SubjectService ().GetById (active.Subject_Id);

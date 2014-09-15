@@ -118,12 +118,12 @@ namespace TeachPlan
 
 		public string Condition { get; set; }
 		//public string Step { get; set; }
-		public List<String> Steps {
+		public List<ActiveStep> Steps {
 			get;
 			set;
 		}
 
-		public List<int> Plan_Ids { get; set; }
+		public int Plan_Id { get; set; }
 
 		public int Subject_Id { get; set; }
 
@@ -235,6 +235,17 @@ namespace TeachPlan
 	public class Subject : MongoEntity
 	{
 		public string Name { get; set; }
+	}
+
+	public class PreSetStep : MongoEntity
+	{
+		public string Content { get; set; }
+		public string Description { get; set; }
+	}
+
+	public class ActiveStep : PreSetStep
+	{
+		public string UserDescription{ get; set; }
 	}
 
 	public class Textbook : MongoEntity

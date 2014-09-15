@@ -13,21 +13,16 @@ namespace TeachPlan.Controllers
 			return View ();
 		}
 
-		public PartialViewResult Active(Active modle)
+		public PartialViewResult Active (Active modle)
 		{
-			return PartialView("_Active",modle);
+			return PartialView ("_Active", modle);
 		}
 
 		[HttpGet]
 		public PartialViewResult AddActive (int planId)
 		{
 			var active = new Active ();
-			if (planId > 0) {
-				if (active.Plan_Ids == null)
-					active.Plan_Ids = new List<int>();
-				active.Plan_Ids.Add (planId);
-			}
-
+			active.Plan_Id = planId;
 			return PartialView ("_AddActive", active);
 		}
 
@@ -36,7 +31,7 @@ namespace TeachPlan.Controllers
 		{
 			var service = new ActiveService ();
 			model.UserInfo_Id = int.Parse (Session ["user"].ToString ());
-			model.Steps = Request.Form ["addsteps"].Split ('$').ToList ();
+			model.Steps = new List<ActiveStep> ();
 			service.Create (model);
 			return Json (true);
 		}
@@ -91,14 +86,20 @@ namespace TeachPlan.Controllers
 			var content = forms.Get ("content");
 			var subject = forms.Get ("subject");
 
-			return SearchActives ((int)Session ["user"],
-				(form != null) ? int.Parse (form) : 0,
-				(phase != null) ? int.Parse (phase) : 0,
-				(content != null) ? int.Parse (content) : 0,
-				(subject != null) ? int.Parse (subject) : 0);
+			return SearchActivesBy ((int)Session ["user"],
+			                        (form != null) ? int.Parse (form) : 0,
+			                        (phase != null) ? int.Parse (phase) : 0,
+			                        (content != null) ? int.Parse (content) : 0,
+			                        (subject != null) ? int.Parse (subject) : 0);
 		}
 
-		public PartialViewResult SearchActives (int userId, int formId, int subjectId, int phaseId, int contentId)
+		/**
+		public PartialViewResult SearchActives()
+		{
+			return SearchActives ((int)Session ["user"], 0, 0, 0, 0);
+		}
+**/
+		public PartialViewResult SearchActivesBy (int userId, int formId, int subjectId, int phaseId, int contentId)
 		{
 			var service = new ActiveService ();
 			var enumer = service.GetByUserId (userId, formId, subjectId, phaseId, contentId);
@@ -108,6 +109,54 @@ namespace TeachPlan.Controllers
 				list.Add (new TPlan.ActiveDetailModel (e.Current));
 			}
 			return PartialView ("_Actives", list);
+		}
+
+		public ViewResult EditActive (int activeId)
+		{
+			var service = new ActiveService ();
+			var active = service.GetById (activeId);
+			return View ("_EditActive", active);
+		}
+
+		public PartialViewResult ShowPreSetSteps (int acitveId)
+		{
+			ViewData ["activeId"] = acitveId;
+			var service = new PreSetStepService ();
+			return PartialView ("_PreSetSteps", service.GetAll ());
+		}
+
+		public PartialViewResult ShowActiveSteps(List<ActiveStep> steps)
+		{
+			return PartialView ("_ActiveSteps", steps);
+		}
+
+		public PartialViewResult AddPreSetStepToActive (int activeId)
+		{
+			var ids = new List<int> ();
+			foreach (var key in Request.Form.AllKeys) {
+				if (key.IndexOf ("pss") != 0)
+					continue;
+				var selected = (Request.Form [key] == "true,false");
+				if (selected) {
+					ids.Add (int.Parse (key.Replace ("pss", "")));
+				}
+			}
+			var psss = new PreSetStepService ();
+			var pss = psss.GetByIds (ids);
+			var service = new ActiveService ();
+			var active = service.GetById (activeId);
+			foreach (var s in pss) {
+				var nas = new ActiveStep () {
+					MyId = (active.Steps.Count+1),
+					Content = s.Content,
+					Description = s.Description,
+					UserDescription = ""
+				};
+				active.Steps.Add (nas);
+			}
+
+			service.UpdateSteps (activeId, active.Steps);
+			return PartialView ("_ActiveSteps",active.Steps);
 		}
 
 		public static IEnumerable<SelectListItem> getAllTargetType ()

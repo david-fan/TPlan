@@ -1,0 +1,12 @@
+﻿@model IEnumerable<TeachPlan.ActiveStep>
+@foreach (var s in Model) 
+    
+    {
+        <li>
+            @Html.Label(s.Content)
+            <br/>
+            @Html.TextBox("description",s.UserDescription)
+            <br/>
+            @Html.Label("tip",s.Description)
+        </li>
+    }

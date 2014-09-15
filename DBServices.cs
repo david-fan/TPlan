@@ -31,12 +31,6 @@ public class PlanService : EntityService<Plan>
         var update = Update<Plan>.Set(e => e.Thinks, thinks);
         this.MongoConnectionHandler.MongoCollection.Update(query, update, UpdateFlags.Upsert);
     }
-    public IEnumerable<Plan> GetByIds(IEnumerable<int> ids)
-    {
-        var query = Query<Plan>.In(e => e.MyId, ids);
-        var results = this.MongoConnectionHandler.MongoCollection.Find(query);
-        return results;
-    }
 
     public IEnumerable<Plan> GetLastCreate(int limit)
     {
@@ -49,66 +43,74 @@ public class PlanService : EntityService<Plan>
 
 public class ContentService : EntityService<Content>
 {
-    public IEnumerable<Content> GetAll()
-    {
-        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
-        return comments;
-    }
+//    public IEnumerable<Content> GetAll()
+//    {
+//        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
+//        return comments;
+//    }
 }
 
 public class FormService : EntityService<Form>
 {
-    public IEnumerable<Form> GetAll()
-    {
-        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
-        return comments;
-    }
+//    public IEnumerable<Form> GetAll()
+//    {
+//        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
+//        return comments;
+//    }
 }
 
 public class PhaseService : EntityService<Phase>
 {
-    public IEnumerable<Phase> GetAll()
-    {
-        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
-        return comments;
-    }
+//    public IEnumerable<Phase> GetAll()
+//    {
+//        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
+//        return comments;
+//    }
 }
 
 public class SubjectService : EntityService<Subject>
 {
-    public IEnumerable<Subject> GetAll()
-    {
-        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
-        return comments;
-    }
+//    public IEnumerable<Subject> GetAll()
+//    {
+//        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
+//        return comments;
+//    }
 }
 
 public class TextbookService : EntityService<Textbook>
 {
-    public IEnumerable<Textbook> GetAll()
-    {
-        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
-        return comments;
-    }
+//    public IEnumerable<Textbook> GetAll()
+//    {
+//        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
+//        return comments;
+//    }
 }
 
 public class GradeService : EntityService<Grade>
 {
-    public IEnumerable<Grade> GetAll()
-    {
-        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
-        return comments;
-    }
+//    public IEnumerable<Grade> GetAll()
+//    {
+//        var comments = this.MongoConnectionHandler.MongoCollection.FindAll();
+//        return comments;
+//    }
 }
 	
 public class ActiveService : EntityService<Active>
 {
     public IEnumerable<Active> GetByPlan(int planId)
     {
-		var query = Query<Active>.In(e => e.Plan_Ids, new int[1]{planId});
+		var query = Query<Active>.EQ(e => e.Plan_Id, planId);
         var results = this.MongoConnectionHandler.MongoCollection.Find(query);
         return results;
     }
+
+	public void UpdateSteps(int activeId,List<ActiveStep>  steps)
+	{
+		var query = Query<Active>.EQ(e => e.MyId, activeId);
+		var update = Update<Active>.Set(e => e.Steps, steps);
+		this.MongoConnectionHandler.MongoCollection.Update(query, update, UpdateFlags.Upsert);
+	}
+
 	public IEnumerable<Active> GetByUserId(int userId,int formId,int subjectId,int phaseId,int contentId)
     {
 		var queries = new List<IMongoQuery> ();
@@ -195,6 +197,10 @@ public class CommentService : EntityService<Comment>
     }
 
 }
+public class PreSetStepService : EntityService<PreSetStep>
+{
+
+}
 
 public class KnowledgeService : EntityService<Knowledge>
 {
@@ -203,13 +209,6 @@ public class KnowledgeService : EntityService<Knowledge>
         var knowledges = this.MongoConnectionHandler.MongoCollection.FindAllAs<Knowledge>()
             .SetSortOrder(SortBy<Knowledge>.Descending(g => g.CreateDate))
             .SetLimit(limit);
-        return knowledges;
-    }
-
-    public IEnumerable<Knowledge> GetByIds(IEnumerable<int> ids)
-    {
-        var query = Query<Knowledge>.In(e => e.MyId, ids);
-        var knowledges = this.MongoConnectionHandler.MongoCollection.Find(query);
         return knowledges;
     }
 

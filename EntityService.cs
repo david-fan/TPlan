@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using System.Collections.Generic;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using MongoDB.Bson.Serialization.Attributes;
@@ -72,7 +73,17 @@ public abstract class EntityService<T> : IEntityService<T> where T : IMongoEntit
         var entityQuery = Query<T>.EQ(e => e.MyId, id);
         return this.MongoConnectionHandler.MongoCollection.FindOne(entityQuery);
     }
-
+	public IEnumerable<T> GetAll()
+	{
+		var all = this.MongoConnectionHandler.MongoCollection.FindAll();
+		return all;
+	}
+	public IEnumerable<T> GetByIds(IEnumerable<int> ids)
+	{
+		var query = Query<T>.In(e => e.MyId, ids);
+		var results = this.MongoConnectionHandler.MongoCollection.Find(query);
+		return results;
+	}
     public void Update(T entity)
     {
         //// Not necessary for the example

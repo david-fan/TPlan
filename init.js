@@ -17,3 +17,7 @@ db.SubjectSet.save({MyId:3,Name:'英语'});
 db.TextbookSet.save({MyId:1,Name:'人教'});
 db.TextbookSet.save({MyId:2,Name:'高教'});
 db.TextbookSet.save({MyId:3,Name:'江苏'});
+db.PreSetStepSet.save({MyId:1,Content:"s1",Description:"desc1"});
+db.PreSetStepSet.save({MyId:2,Content:"s2",Description:"desc2"});
+db.PreSetStepSet.save({MyId:3,Content:"s3",Description:"desc3"});
+db.PreSetStepSet.save({MyId:4,Content:"s4",Description:"desc4"});

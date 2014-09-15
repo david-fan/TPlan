@@ -20,7 +20,8 @@
     {
         <tr>
             <td>
-                @item.Name
+            @Html.ActionLink(item.Name,"EditActive",new {activeid=item.MyId})
+                
             </td>
             <td>
                 @item.Property
@@ -46,7 +47,7 @@
                         @foreach (var s in item.Steps)
                         {
                             <li>
-                                @Html.Label(s)
+                                @Html.Label(s.UserDescription)
                             </li>
                         }
                     </ul>

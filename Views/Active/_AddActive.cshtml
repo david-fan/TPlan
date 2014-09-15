@@ -1,25 +1,4 @@
 ﻿@model TeachPlan.Active
-<script type="text/template" id="inputTpl">
-		<input type="input" class="input" /></br>
-	</script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#add').click(function(){
-				var tpl = ($('#inputTpl').html());
-				$('#container').append(tpl);
-			});
-			$('#submit').click(function() {
-				var values = new Array();
-				$('.input').each(function(index) {
-					var input = $(this);
-					if (input.val() != '') {
-						values.push(input.val());
-					}
-				});
-				$('#addsteps').val(values.join("$"));
-			});
-		});
-	</script>
 @using (Ajax.BeginForm("AddActive", "Home", new AjaxOptions
 {
     OnSuccess = "OnAddActiveSucess"
@@ -72,21 +51,9 @@
     <div class="editor-field">
         @Html.DropDownListFor(m => m.Form_Id, TeachPlan.Controllers.PlanController.getAllForms())
     </div>
-    <div class="editor-label">
-        步骤
-    </div>
     <div class="editor-field">
     <div id="container"></div>
-
-    @if(Model.Plan_Ids!=null){
-     	for (var i = 0; i < Model.Plan_Ids.Count(); i++)
-	    {
-	        @Html.HiddenFor(m => m.Plan_Ids[i]);
-	    }
-    }
-    	@Html.Hidden("addsteps","")
-    <input id="add" type="button" value="add step"/>
-            
+	     @Html.HiddenFor(m => m.Plan_Id)
     </div>
     <input id="submit" type="submit" value="提交" />
 }
