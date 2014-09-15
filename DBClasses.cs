@@ -70,14 +70,19 @@ namespace TeachPlan
 
 		public string Method { get; set; }
 	}
+
 	public class UploadFile
 	{
 		[BsonIgnoreAttribute]
-		public int planId{ get; set;}
-		public string fileName{ get; set;}
-		public string fileDesc{ get; set;}
+		public int planId{ get; set; }
+
+		public string fileName{ get; set; }
+
+		public string fileDesc{ get; set; }
+
 		public string filePath{ get; set; }
 	}
+
 	public class Think
 	{
 		[BsonIgnoreAttribute]
@@ -240,12 +245,34 @@ namespace TeachPlan
 	public class PreSetStep : MongoEntity
 	{
 		public string Content { get; set; }
+
 		public string Description { get; set; }
 	}
 
-	public class ActiveStep : PreSetStep
+	public class ActiveStep:IComparable
 	{
+		public int OrderId { get; set; }
+
+		public string Content { get; set; }
+
+		public string Description { get; set; }
+
 		public string UserDescription{ get; set; }
+
+		public int CompareTo (object obj)
+		{
+			int result;
+			try {
+				ActiveStep info = obj as ActiveStep;
+				if (this.OrderId > info.OrderId) {
+					result = 0;
+				} else
+					result = 1;
+				return result;
+			} catch (Exception ex) {
+				throw new Exception (ex.Message);
+			}
+		}
 	}
 
 	public class Textbook : MongoEntity

@@ -1,12 +1,13 @@
-﻿@model IEnumerable<TeachPlan.ActiveStep>
-@foreach (var s in Model) 
-    
-    {
-        <li>
-            @Html.Label(s.Content)
-            <br/>
-            @Html.TextBox("description",s.UserDescription)
-            <br/>
-            @Html.Label("tip",s.Description)
-        </li>
+﻿@model TeachPlan.Active
+@for (int i = 0; i < Model.Steps.Count; i++) {
+	@Html.Label(Model.Steps[i].Content,new {@tip=Model.Steps[i].Description})
+    <br/>
+    @Html.TextBox("description",Model.Steps[i].UserDescription)
+    <br/>
+    if (i>0) {
+    	@Ajax.ActionLink("UP","ReOrderActiveStep",new {orderId=Model.Steps[i].OrderId,type="UP",activeId=Model.MyId},new AjaxOptions{ UpdateTargetId="steps"})
     }
+    if (i<Model.Steps.Count-1) {
+    	@Ajax.ActionLink("DOWN","ReOrderActiveStep",new {orderId=Model.Steps[i].OrderId,type="DOWN",activeId=Model.MyId},new AjaxOptions{ UpdateTargetId="steps"})
+    }	
+}			

@@ -125,9 +125,30 @@ namespace TeachPlan.Controllers
 			return PartialView ("_PreSetSteps", service.GetAll ());
 		}
 
-		public PartialViewResult ShowActiveSteps(List<ActiveStep> steps)
+		public PartialViewResult ShowActiveSteps(Active active)
 		{
-			return PartialView ("_ActiveSteps", steps);
+			return PartialView ("_ActiveSteps", active);
+		}
+
+		public PartialViewResult ReOrderActiveStep(int orderId,string type,int activeId)
+		{
+			var service = new ActiveService ();
+			var tempId = 0;
+			if (type == "DOWN") {
+				tempId = orderId + 1;
+			} else if (type == "UP") {
+				tempId = orderId - 1;
+			}
+			var active = service.GetById (activeId);
+			foreach (var s in active.Steps) {
+				if (s.OrderId == tempId)
+					s.OrderId = orderId;
+				else if (s.OrderId == orderId)
+					s.OrderId = tempId;
+			}
+			active.Steps.Sort ();
+			service.UpdateSteps (activeId, active.Steps);
+			return PartialView ("_ActiveSteps",active);
 		}
 
 		public PartialViewResult AddPreSetStepToActive (int activeId)
@@ -147,16 +168,16 @@ namespace TeachPlan.Controllers
 			var active = service.GetById (activeId);
 			foreach (var s in pss) {
 				var nas = new ActiveStep () {
-					MyId = (active.Steps.Count+1),
+					OrderId = (active.Steps.Count+1),
 					Content = s.Content,
 					Description = s.Description,
-					UserDescription = ""
+					UserDescription = s.Description
 				};
 				active.Steps.Add (nas);
 			}
 
 			service.UpdateSteps (activeId, active.Steps);
-			return PartialView ("_ActiveSteps",active.Steps);
+			return PartialView ("_ActiveSteps",active);
 		}
 
 		public static IEnumerable<SelectListItem> getAllTargetType ()
