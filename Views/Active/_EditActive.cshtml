@@ -11,21 +11,24 @@
             modal: true
         });
     });
-    function OnAddActiveSucess(data) {
+    var savedatas;
+    function OnSaveActiveSucess(data) {
+    savedatas={};
         alert(data);
         dialog.dialog("close");
     }
+    
+    function checkField(tag){
+    savedatas[tag.id]=tag.value;
+    	alert(tag);
+    }
 </script>
-@using (Ajax.BeginForm("AddActive", "Home", new AjaxOptions
-{
-    OnSuccess = "OnAddActiveSucess"
-}, new { @id = "addActiveForm" }))
-{
+
     <div class="editor-label">
         名称
     </div>
     <div class="editor-field">
-        @Html.TextBoxFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name,new {@onchange="checkField(this)"})
         @Html.ValidationMessageFor(m => m.Name)
     </div>
 
@@ -82,5 +85,5 @@
     <div id="steps">
     	@Html.Partial("_ActiveSteps",Model)
     </div>
-    <input id="submit" type="submit" value="提交" />
-}<div id="saveDialog" title="增加新步骤">
+    <input id="submit" type="submit" value="保存修改" />
+<div id="saveDialog" title="增加新步骤">

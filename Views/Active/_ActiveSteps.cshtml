@@ -2,7 +2,7 @@
 @for (int i = 0; i < Model.Steps.Count; i++) {
 	@Html.Label(Model.Steps[i].Content,new {@tip=Model.Steps[i].Description})
     <br/>
-    @Html.TextBox("description",Model.Steps[i].UserDescription)
+    @Html.TextBox("description"+Model.Steps[i].OrderId,Model.Steps[i].UserDescription,new {@onchange="checkField(this)"})
     <br/>
     if (i>0) {
     	@Ajax.ActionLink("UP","ReOrderActiveStep",new {orderId=Model.Steps[i].OrderId,type="UP",activeId=Model.MyId},new AjaxOptions{ UpdateTargetId="steps"})
